@@ -21,6 +21,21 @@ namespace ControleProduto
             _quantidade = quantidade;
         }
 
+        public string GetNome ()
+        {
+            return _nome;
+        }
+
+        public double GetPreco()
+        {
+            return _preco;
+        }
+
+        public int Quantidade()
+        {
+            return _quantidade;
+        }
+
         public double ValorTotalEstoque()
         {
             return _preco * _quantidade;

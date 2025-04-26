@@ -3,13 +3,16 @@ using ControleProduto;
 using System.Globalization;
 
 
-/*
+
 //Apenas um teste para tentar acessar a prop. quantidade externamente.
 
 Produto p = new Produto("teste", 90.00, 10);
-Console.WriteLine(p._quantidade);
-*/
 
+p.SetNome("Tes");
+
+Console.WriteLine(p.GetNome());
+
+/*
 #region entrada dados
 Console.Write("Informe o nome do produto: "); 
 string nome = Console.ReadLine();
@@ -47,4 +50,4 @@ Console.WriteLine(p);
 Console.WriteLine();
 
 #endregion 
-
+*/
