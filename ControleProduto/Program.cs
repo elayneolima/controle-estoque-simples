@@ -17,9 +17,35 @@ Console.WriteLine(p.GetPreco());
 Console.WriteLine(p.GetQuantidade());
 
 */
+#region Login
 
+Acesso login = new Acesso("Teste", "SEN13");
+
+Console.Write("Informe o usuário: ");
+string uAcesso = Console.ReadLine();
+
+Console.Write("Informe a senha: ");
+string uChave = Console.ReadLine();
+
+
+if (!login.ValidarLogin(uAcesso, uChave))
+{
+    Console.WriteLine("Usuário ou Senha está incorreto, verifique e tente novamente."); 
+    return;
+}
+
+#endregion
 
 #region entrada dados
+
+Console.WriteLine();
+
+if (login.ValidarLogin(uAcesso, uChave) == true)
+{
+    Console.WriteLine($"Olá, você está logado com usuário proprietário {uAcesso}");
+}
+
+
 Console.Write("Informe o nome do produto: "); 
 string nome = Console.ReadLine();
 

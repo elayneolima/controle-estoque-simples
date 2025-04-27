@@ -14,11 +14,12 @@ namespace ControleProduto
         public Acesso (string nomeUsuario, string senhaUsuario)
         {
             this._usuario = nomeUsuario;
-            this._senha = senhaUsuario;
+            this._senha = senhaUsuario ;
         }
 
-        public bool ValidarLogin()
+        public bool ValidarLogin(string uNome, string uSenha)
         {
+            return uNome == this._usuario && uSenha == this._senha;
 
         }
     }
