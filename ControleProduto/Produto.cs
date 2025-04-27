@@ -9,6 +9,8 @@ namespace ControleProduto
 {
     internal class Produto
     {
+        private Mensageiro mensageiro = new Mensageiro(); 
+
         private string _nome;
         private double _preco;
         private int _quantidade; 
@@ -23,17 +25,41 @@ namespace ControleProduto
 
         public string GetNome ()
         {
-            return _nome;
+            if (_nome != null && _nome.Length > 1)
+            {
+                return _nome;
+            }
+            else
+            {
+                return "Nome é obrigatório";
+            }
+            
         }
 
         public double GetPreco()
         {
-            return _preco;
+            if (_preco != null)
+            {
+                return _preco;
+            }
+            else
+            {
+                Console.WriteLine(mensageiro.MensagemAlerta("Preco é obrigatório!")); 
+                return 0; 
+            }
         }
 
-        public int Quantidade()
+        public int GetQuantidade()
         {
-            return _quantidade;
+            if (_quantidade != null)
+            {
+                return _quantidade;
+            }
+            else
+            {
+                Console.WriteLine(mensageiro.MensagemAlerta("Quantidade é obrigatoria!"));
+                return 0;
+            }
         }
 
         public double ValorTotalEstoque()

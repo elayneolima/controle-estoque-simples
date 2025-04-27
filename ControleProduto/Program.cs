@@ -4,15 +4,21 @@ using System.Globalization;
 
 
 
-//Apenas um teste para tentar acessar a prop. quantidade externamente.
-
-Produto p = new Produto("teste", 90.00, 10);
-
-p.SetNome("Tes");
-
-Console.WriteLine(p.GetNome());
-
 /*
+
+string nome = Console.ReadLine();
+double preco = double.Parse(Console.ReadLine());
+int quantidade = int.Parse(Console.ReadLine());
+
+
+Produto p = new Produto(nome, preco, quantidade);
+Console.WriteLine(p.GetNome()); 
+Console.WriteLine(p.GetPreco());
+Console.WriteLine(p.GetQuantidade());
+
+*/
+
+
 #region entrada dados
 Console.Write("Informe o nome do produto: "); 
 string nome = Console.ReadLine();
@@ -50,4 +56,4 @@ Console.WriteLine(p);
 Console.WriteLine();
 
 #endregion 
-*/
+
