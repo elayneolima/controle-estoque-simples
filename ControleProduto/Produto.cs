@@ -23,45 +23,18 @@ namespace ControleProduto
             _quantidade = quantidade;
         }
 
-        public string GetNome ()
-        {
-            if (_nome != null && _nome.Length > 1)
-            {
-                return _nome;
-            }
-            else
-            {
-                return "Nome é obrigatório";
-            }
-            
-        }
 
-        public double GetPreco()
+        public string Nome
         {
-            if (_preco != null)
+            get { return _nome; }
+            set
             {
-                return _preco;
-            }
-            else
-            {
-                Console.WriteLine(mensageiro.MensagemAlerta("Preco é obrigatório!")); 
-                return 0; 
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
             }
         }
-
-        public int GetQuantidade()
-        {
-            if (_quantidade != null)
-            {
-                return _quantidade;
-            }
-            else
-            {
-                Console.WriteLine(mensageiro.MensagemAlerta("Quantidade é obrigatoria!"));
-                return 0;
-            }
-        }
-
         public double ValorTotalEstoque()
         {
             return _preco * _quantidade;
